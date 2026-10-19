@@ -1,0 +1,55 @@
+# -------------------------------------------------------
+# Items that can be commited for reproducible
+# -------------------------------------------------------
+!terraform.tfvars.example
+!bruin.config.yml.example
+!.devcontainer/devcontainer.json
+
+# -------------------------------------------------------
+# Python
+# -------------------------------------------------------
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# -------------------------------------------------------
+# Terraform
+# -------------------------------------------------------
+# Local state — never commit this. It contains resource IDs
+# and can contain sensitive values.
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/terraform.tfvars
+
+# -------------------------------------------------------
+# GCP / Google Cloud
+# -------------------------------------------------------
+# Application default credentials — never commit
+*.json
+
+# -------------------------------------------------------
+# Bruin
+# -------------------------------------------------------
+.bruin/
+.bruin.yml
+.last_run_*
+
+# -------------------------------------------------------
+# Local / OS
+# -------------------------------------------------------
+.DS_Store
+.env
+.venv
+*.env
+*.log
+/tmp/
+logs/runs
+logs/*.log
